@@ -1,0 +1,89 @@
+body {
+  margin: auto;
+  width: 100%;
+  max-width: 1200px;
+  text-align: center;
+  font-family: 'Arial';
+  font-weight: bold;
+  background-color: #020202;
+  color: white;
+}
+
+h1 {
+  font-size: 60px;
+  color: #2cbb05;
+  margin-left: 20px;
+}
+
+#gameGrid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  margin: 20px auto;
+  width: 95%;
+}
+
+.gameField {
+  border: 8px solid #2cbb05;
+  color: white;
+  font-size: 100px;
+  padding: 15px 0px;
+  text-align: center;
+  height: 110px;
+  cursor: pointer;
+}
+
+.gameField:nth-child(-n+3) {
+  border-top: none;
+}
+
+.gameField:nth-child(n+7) {
+  border-bottom: none;
+}
+
+.gameField:nth-child(3n) {
+  border-right: none;
+}
+
+.gameField:nth-child(3n+1) {
+  border-left: none;
+}
+
+button {
+  background-color: #2cbb05;
+  font-family: 'Montserrat';
+  font-weight: bold;
+  font-size: 16px;
+  color: white;
+  margin: 50px;
+  width: 130px;
+  height: 60px;
+  border: none;
+  display: inline-block;
+}
+
+#header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#message {
+  background-color: whitesmoke;
+  padding: 18px;
+  font-size: 30px;
+  box-shadow: 0px 0px 25px 0px #2cbb05;
+  color: #2cbb05;
+  transition: all .4s ease-in-out;
+  animation: scaleMessage 1.6s infinite;
+  display: none;
+}
+
+@keyframes scaleMessage {
+  50% {
+    transform: scale(0.8);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
